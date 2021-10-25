@@ -1,0 +1,40 @@
+﻿@model PostViewModel
+
+@{
+    ViewData["Title"] = "Post";
+}
+<div class="container" style="background-color:white;">
+
+    <form class="login100-form validate-form" asp-controller="Posts" asp-action="CreatePost" method="post" enctype="multipart/form-data">
+        <h1 class="text-center">
+            Creating a new post!
+        </h1>
+
+        <div class="wrap-input100 validate-input">
+            <input asp-for="UserID" class="input100" value="@TempData["usuarioLogado"]" type="hidden">
+        </div>
+
+        <div>
+            <label>Image</label>
+            <input asp-for="CurrentImage" type="hidden" />
+            <input asp-for="Image" />
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+            <span class="label-input100">Subtitle</span>
+            <input asp-for="Subtitle" class="input100" type="text">
+            <span asp-validation-for="Subtitle" class="focus-input100"></span>
+        </div>
+
+
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button type="submit" value="Create" class="btn btn-outline-dark">
+                    Create
+                </button>
+            </div>
+        </div>
+    </form>
+
+</div>
