@@ -10,3 +10,9 @@
   <li>Edição dos posts</li>
   <li>Exclusão dos posts</li>
 </ul>
+
+#Ferramentas
+<ul>
+  <li>ASP.NET Core</li>
+  <li>SQL Server</li>
+</ul>
